@@ -43,7 +43,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: mavendeptree
-          path: /mavenJavaTest/maven_dep_tree.txt
+          path: mavenJavaTest/maven_dep_tree.txt
       - uses: actions/checkout@v3
       - run: ls
       - run: semgrep ci
