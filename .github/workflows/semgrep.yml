@@ -45,5 +45,6 @@ jobs:
           name: mavendeptree
           path: mavenJavaTest/maven_dep_tree.txt
       - uses: actions/checkout@v3
-      - run: ls
+      - run: ls -R
+      - working-directory: mavenJavaTest/maven_dep_tree.txt
       - run: semgrep ci
