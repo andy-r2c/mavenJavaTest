@@ -44,4 +44,5 @@ jobs:
         with:
           name: mavendeptree
       - uses: actions/checkout@v3
+      - run: ls
       - run: semgrep ci
