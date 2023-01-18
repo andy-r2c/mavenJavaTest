@@ -39,11 +39,11 @@ jobs:
     container:
       image: returntocorp/semgrep
     steps:
+      - uses: actions/checkout@v3
       - name: Download dep tree from prior job
         uses: actions/download-artifact@v3
         with:
           name: mavendeptree
           path: mavenJavaTest/maven_dep_tree.txt
-      - uses: actions/checkout@v3
       - run: ls -R
       - run: semgrep ci
