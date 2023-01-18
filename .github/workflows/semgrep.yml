@@ -10,14 +10,7 @@ on:
   schedule:
   # random HH:MM to avoid a load spike on GitHub Actions at 00:00
   - cron: 33 2 * * *
-
-
-
-
 name: Semgrep
-
-
-
 jobs:
   mavenDepTree: 
       runs-on: ubuntu-latest
@@ -35,7 +28,7 @@ jobs:
   semgrep:
     needs: mavenDepTree
     name: Scan
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     env:
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
     container:
