@@ -44,6 +44,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: mavendeptree
-          path: maven_dep_tree.txt
+          path: ./
       - run: ls -R
       - run: semgrep ci
